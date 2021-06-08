@@ -1,7 +1,6 @@
 # se
 for se special lecture
 
-
 ## node追加について
 - 下記をbash_profile.sh下部に追加
 - nodeのwin版zipをDLして解凍して置いておく必要あり
@@ -25,3 +24,10 @@ export PATH=/c/oit/$COURSEYEAR/python-3.9.5-embed-amd64/:$PATH
 - python39._pthの `import site`のコメントを外す
 - `https://bootstrap.pypa.io/get-pip.py` をダウンロードして実行 `python get-pip.py` 
 - `python -m pip install` 形式で実行できるようになる
+## 要変更
+- zipwork.sh
+- nsswitch.conf
+- デフォルトブランチはmaster (init git repo等複数のコマンドが影響を受けるため．要検討）
+- .project
+- settings.json(2つ)
+- course*
