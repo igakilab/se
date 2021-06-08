@@ -20,6 +20,7 @@ mkdir -p "$USERPROFILE/oithomes/$CLASSNAME/kadai/$COURSEYEAR/.log/"
 
 export PATH=/c/oit/$COURSEYEAR/`/usr/local/bin/coursejdk`/bin/:$PATH
 export PATH=/c/oit/$COURSEYEAR/`/usr/local/bin/coursevscode`/:$PATH
+export PATH=/c/oit/$COURSEYEAR/`/usr/local/bin/coursegradle`/bin/:$PATH
 export HOME=$(cd "$USERPROFILE\oithomes\\${CLASSNAME}" && pwd)
 
 # Hidden setting
