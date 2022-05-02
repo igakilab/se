@@ -1,0 +1,6 @@
+#!/bin/sh
+if [ "$#"  = "1" ] && [ "$1" = "-v" ]; then
+    echo "se"
+else
+    echo "se21"
+fi
