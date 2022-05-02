@@ -12,6 +12,8 @@ RB='\e[1;31m'
 RE='\e[m'
 
 echo -e "${GB}課題提出などの際に演習室のLinux環境に接続するための設定を行います．${GE}"
+# known_hostsの削除
+rm -f ~/.ssh/known_hosts
 sleep 0.3
 
 #

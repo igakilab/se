@@ -10,17 +10,18 @@ if [ -e ~/.bashrc -a ! -e ~/.bash_profile -a ! -e ~/.bash_login -a ! -e ~/.profi
 	EOF
 fi
 
-export CLASSNAME=`/usr/local/bin/course -v`
+export CLASSNAME=`/usr/local/bin/course`
 
 PATH=/mingw64/bin:/usr/local/bin:/usr/bin:/bin:/usr/bin/core_perl:/usr/bin/vendor_perl
 export LANG="ja_JP.UTF-8"
-export COURSEYEAR=`/usr/local/bin/course`
+export COURSEYEAR=`/usr/local/bin/course -v`
+export BYOD=${COURSEYEAR}-byod
 
 mkdir -p "$USERPROFILE/oithomes/$CLASSNAME/kadai/$COURSEYEAR/.log/"
 
-export PATH=/c/oit/$COURSEYEAR/`/usr/local/bin/coursejdk`/bin/:$PATH
-export PATH=/c/oit/$COURSEYEAR/`/usr/local/bin/coursevscode`/:$PATH
-export PATH=/c/oit/$COURSEYEAR/`/usr/local/bin/coursegradle`/bin/:$PATH
+export PATH=/c/oit/${BYOD}/`/usr/local/bin/coursejdk`/bin/:$PATH
+export PATH=/c/oit/${BYOD}/`/usr/local/bin/coursevscode`/:$PATH
+export PATH=/c/oit/${BYOD}/`/usr/local/bin/coursegradle`/bin/:$PATH
 export HOME=$(cd "$USERPROFILE\oithomes\\${CLASSNAME}" && pwd)
 
 # Hidden setting
@@ -31,17 +32,17 @@ export HISTFILE="$HOME/kadai/$COURSEYEAR/.log/.${CLASSNAME}_bash_history.$HISTDA
 HISTTIMEFORMAT="%Y/%m/%dT%T%z "
 export PROMPT_COMMAND='echo -e "res:$?\tpwd:$PWD" >> ~/kadai/$COURSEYEAR/.log/.${CLASSNAME}_bash_history.$HISTDATE;history -a'
 
-# ŒÃ‚¢java_bash_history‚Íƒ[ƒJƒ‹‚©‚çíœi6ƒ–ŒˆÈã‘Oj
+# å¤ã„java_bash_historyã¯ãƒ­ãƒ¼ã‚«ãƒ«ã‹ã‚‰å‰Šé™¤ï¼ˆ6ãƒ¶æœˆä»¥ä¸Šå‰ï¼‰
 this_month=`date +'%Y%m'`
 last_month=`date -d "${this_month}01 5 month ago" +'%Y%m'`
-find ~/kadai/`/usr/local/bin/course`/ -name ".${CLASSNAME}_bash_history*" -not -name ".${CLASSNAME}_bash_history.${this_month}" -not -name ".${CLASSNAME}_bash_history.${last_month}" -exec rm {} \;
+find ~/kadai/${COURSEYEAR}/ -name ".${CLASSNAME}_bash_history*" -not -name ".${CLASSNAME}_bash_history.${this_month}" -not -name ".${CLASSNAME}_bash_history.${last_month}" -exec rm {} \;
 
-# /home‚Ìì¬
+# /homeã®ä½œæˆ
 export MSYS=winsymlinks:lnk
 if [ ! -e "/home/${USERNAME}" ]; then
   mkdir -p /home
   ln -s "${HOME}" "/home/${USERNAME}"
 fi
 
-JAVA_HOME=/c/oit/$COURSEYEAR/`/usr/local/bin/coursejdk`/
-export GRADLE_OPTS="-Dfile.encoding=UTF-8"
+export JAVA_HOME=/c/oit/${BYOD}/`/usr/local/bin/coursejdk`/
+export GRADLE_OPTS="-Dfile.encoding=utf-8"
