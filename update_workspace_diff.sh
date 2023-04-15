@@ -66,6 +66,7 @@ function ConfirmVersionUpdate() {
 function RsyncEnvironment() {
   echo "$1から$2への同期を行います $3"
   rsync -avm --checksum $3 \
+        --exclude='**/bin/'  \
         --include='*/'  \
         --include='.version'  \
         --include='settings.json'  \

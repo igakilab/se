@@ -1,8 +1,9 @@
 {
+  "workbench.editor.enablePreview": false,
+  "workbench.colorTheme": "Default Light+",
+  "workbench.editor.labelFormat": "short", // タブに表示する文字列の設定
+  "workbench.editor.tabSizing": "shrink", // タブの表示設定
   "files.encoding": "utf8",
-  "java.trace.server": "messages",
-  "java.errors.incompleteClasspath.severity": "ignore",
-  "extensions.ignoreRecommendations": true,
   "files.exclude": {
     "bin/": true,
     ".*": true,
@@ -11,26 +12,14 @@
     "**/.project": true,
     "**/.settings": true,
   },
-  "workbench.editor.enablePreview": false,
-  "workbench.colorTheme": "Default Light+",
-  "workbench.editor.labelFormat": "short", // タブに表示する文字列の設定
-  "workbench.editor.tabSizing": "shrink", // タブの表示設定
   "files.eol": "\n",
   "files.autoSave": "afterDelay",
   "files.autoSaveDelay": 5000,
   "files.insertFinalNewline": true, // ファイルの保存時に末尾を改行
   "files.trimFinalNewlines": true, // ファイルの保存時に最終行以降をトリミング
   "files.trimTrailingWhitespace": true, // ファイルの保存時に行末の空白をトリミング
-  "local-history.maxDisplay": 10, //Local History関連
-  "local-history.path": "${workspaceFolder}/.log",
-  "local-history.enabled": 2, // Save only files within workspaceFolder
-  "local-history.exclude": [
-    "**/.history /**",
-    "**/.vscode**",
-    "**/.log**",
-    "**/bin/**",
-    "*.class",
-  ],
+  "editor.inlayHints.enabled": "offUnlessPressed",
+  "editor.suggestSelection": "first",
   "editor.codeLens": false,
   "editor.renderWhitespace": "boundary",
   "editor.fontFamily": "Consolas, monospace",
@@ -54,6 +43,4 @@
   "editor.lineNumbers": "on", // 行番号の表示
   "editor.matchBrackets": "always", // 対応する括弧の強調表示をオンに
   "git.enabled": false,
-  "telemetry.enableTelemetry": false,
-  "telemetry.enableCrashReporter": false
 }
