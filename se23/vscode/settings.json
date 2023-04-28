@@ -12,7 +12,7 @@
     "MSYSTEM": "MINGW64",
     "CHERE_INVOKING": "1"
   },
-  "java.jdt.ls.java.home": "c:\\oit\\se23-byod\\amazonjdk11.0.18_10",
+  "java.jdt.ls.java.home": "c:\\oit\\se23-byod\\amazonjdk17.0.7_7",
   "java.jdt.ls.vmargs": "-noverify -Dfile.encoding=utf8 -Xmx1G -Xlog:jni+resolve=off", // -XX:+UseG1GC -XX:+UseStringDeduplication
   "java.debug.settings.vmArgs": "-Xlog:jni+resolve=off",
   "java.import.generatesMetadataFilesAtProjectRoot": false, //.projectなどの場所
