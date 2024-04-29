@@ -1,7 +1,7 @@
 #!/bin/bash
 
 INSTALLED=/c/oit/${BYOD}/`/usr/local/bin/coursegit`
-INSTALLED_VSC=/c/oit/${BYOD}/`/usr/local/bin/coursevscode`/data/appdata/Code/User/settings.json
+INSTALLED_VSC=/c/oit/${BYOD}/`/usr/local/bin/coursevscode`/data/user-data/User/settings.json
 INSTALLED_ETC=${INSTALLED}/etc/
 INSTALLED_BIN=${INSTALLED}/usr/local/bin/
 
