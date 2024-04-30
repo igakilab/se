@@ -39,4 +39,5 @@
     "**/bin/**",
     "*.class",
   ],
+  "java.compile.nullAnalysis.mode": "automatic",
 }
