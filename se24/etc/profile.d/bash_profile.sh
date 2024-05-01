@@ -45,5 +45,7 @@ if [ ! -e "/home/${USERNAME}" ]; then
 fi
 
 export JAVA_HOME=/c/oit/${BYOD}/`/usr/local/bin/coursejdk`/
-export GRADLE_OPTS="-Dfile.encoding=utf-8"
-export _JAVA_OPTIONS="-Dfile.encoding=SHIFT-JIS"
+#export GRADLE_OPTS="-Dfile.encoding=utf-8"
+#export _JAVA_OPTIONS="-Dfile.encoding=UTF-8"
+#export _JAVA_OPTIONS="-Dfile.encoding=SHIFT-JIS"
+#export JAVA_TOOL_OPTIONS="-Dfile.encoding=SHIFT-JIS"
